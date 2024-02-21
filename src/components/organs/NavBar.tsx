@@ -1,21 +1,10 @@
 import { useState, useEffect } from "react"
-import { NavLinks } from "../particles/Data"
-import { List } from "../atoms/List";
-import { NavLink } from "react-router-dom";
-import { ArrowCircleRight, Barbell, CirclesFour } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import { Text } from "../atoms/Text";
 
 
 const NavBar = () => {
-
-    const [open, setOpen] = useState(false)
-
     const [navBarColor, setNavBarColor] = useState(false)
-
-    const handleToggle = () => {
-        setOpen(!open)
-    }
 
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setNavBarColor(true) : setNavBarColor(false);
